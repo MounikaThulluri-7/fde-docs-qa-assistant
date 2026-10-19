@@ -1,6 +1,6 @@
 # Solution Design: Solstice Learning Docs Q&A Assistant
 
-**Author:** Forward Deployed Engineer (FDE)  
+**Author:** Forward Deployed Engineer (FDE)  - Thulluri Naga Sai Durga Mounika
 **Client:** Solstice Learning (Elena Torres, Head of Support)  
 **Deliverable:** System Architecture, Trade-Off Analysis, and Production Roadmap  
 
