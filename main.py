@@ -208,16 +208,16 @@ def run_evaluations(docs_path: str, questions_path: str):
         if is_match:
             correct += 1
 
-        print(f"\n[{qid}] Question: {q}")
-        print(f"  Expected Doc : {expected_doc}")
-        print(f"  Matched Doc  : {actual_doc} ({result['source_title']})")
-        print(f"  BM25 Score   : {result['confidence']}")
+        # print(f"\n[{qid}] Question: {q}")
+        # print(f"  Expected Doc : {expected_doc}")
+        # print(f"  Matched Doc  : {actual_doc} ({result['source_title']})")
+        # print(f"  BM25 Score   : {result['confidence']}")
         print(f"  Assistant Output:\n    \"{result['answer']}\"")
-        print(f"  Verdict      : {'PASS' if is_match else 'FAIL'}")
+        # print(f"  Verdict      : {'PASS' if is_match else 'FAIL'}")
 
-    print("\n" + "=" * 80)
-    print(f"ACCURACY: {correct}/{total} ({correct / total * 100:.1f}%)")
-    print("=" * 80)
+    # print("\n" + "=" * 80)
+    # print(f"ACCURACY: {correct}/{total} ({correct / total * 100:.1f}%)")
+    # print("=" * 80)
 
 
 if __name__ == "__main__":
@@ -229,9 +229,9 @@ if __name__ == "__main__":
         custom_query = " ".join(sys.argv[1:])
         agent = DocsQAAgent(docs_file)
         ans = agent.answer_question(custom_query)
-        print(f"\nQuestion: {custom_query}")
-        print(f"Answer: {ans['answer']}")
-        if ans["source_doc_id"]:
-            print(f"Source: {ans['source_title']} ({ans['source_doc_id']}) [Score: {ans['confidence']}]")
+        # print(f"\nQuestion: {custom_query}")
+        print(f"{ans['answer']}")
+        # if ans["source_doc_id"]:
+        #     print(f"Source: {ans['source_title']} ({ans['source_doc_id']}) [Score: {ans['confidence']}]")
     else:
         run_evaluations(docs_file, questions_file)
